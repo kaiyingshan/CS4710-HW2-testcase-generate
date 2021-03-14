@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js?version=1"></script>
+
+    <div id="create">
+        <input type="number" id="row-input" placeholder="# of rows">
+        <input type="number" id="column-input" placeholder="# of columns">
+        <button onclick="create()">create blocks</button>
+    </div>
+
+    <div id="main" hidden>
+        <div id="blocks">
+            <div style="color: red;">
+                Choose type of block here:
+            </div>
+            <form action="">
+                <input type="radio" name="choice" value="start"> start
+                <input type="radio" name="choice" value="finish"> finish
+                <input type="radio" name="choice" value="air" checked> air
+                <input type="radio" name="choice" value="barrier"> barrier
+            </form>
+        </div>
+        <div>
+            <input type="text" id="filename" placeholder="customInput"> Your file name here
+        </div>
+        <div>
+            <button onclick="download()">Download Text File</button> Choose the type of block and click the block to set block type; refresh to start over
+        </div>
+    </div>
+
+</body>
+</html>
