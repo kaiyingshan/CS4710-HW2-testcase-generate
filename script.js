@@ -69,6 +69,10 @@ function click(x, y) {
         el_arr[x][y] = "S";
         changeBlockType("start", x, y);
         has_start = true;
+
+        if (x == finish_loc[0] && y == finish_loc[1]) {
+        has_finish = false;
+        }
     } else if (radios[1].checked) {
         if (has_finish) {
             const original_x = finish_loc[0],
@@ -81,6 +85,10 @@ function click(x, y) {
         el_arr[x][y] = "F";
         changeBlockType("finish", x, y);
         has_finish = true;
+
+        if(x == start_loc[0] && y == start_loc[1]) {
+            has_start = false;
+        }
     } else if (radios[2].checked) {
         changeBlockType("air", x, y);
         el_arr[x][y] = "O";
